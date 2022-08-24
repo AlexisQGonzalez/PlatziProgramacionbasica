@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra, papel o Tijera</title>
     <script>
+        function eleccion (jugada){
+            let resultado =""
+            if ( jugada == 1 ) {
+                resultado = "PIEDRA"
+            } else if ( jugada == 2){
+                resultado= "PAPEL"
+            } else if(jugada == 3){
+                resultado= "Tijeras"
+            } else{
+                resultado = "llamen a la Policia!"
+            }
+            return resultado
+        }
     // declaremos una funcion
     // function Getrandom(min,max){
     //    return Math.floor(Math.random()*(max - min + 1 ) + min)
@@ -17,24 +30,8 @@
     // elimino la funcion getrandom para ahorrar memoria
     // quitamos el let jugador = 0
     let jugador = prompt("elige: 1 para piedra, 2 para papel o 3 para tijera")
-    // alert("Elegiste " + jugador)
-    if( jugador == 1 ){
-        alert("Elegiste PIEDRA")
-    } else if ( jugador == 2){
-        alert("Elegiste PAPEL")
-    } else if(jugador == 3){
-        alert("Elegiste Tijeras")
-    } else{
-        alert("Que es eso?, Estas loco?, llamen a la policia!")
-    }
-    // HAGAMOS QUE LA PC JUEGUE DE VERDAD
-    if( PC == 1 ){
-        alert("PC elige PIEDRA")
-    } else if ( PC == 2){
-        alert("PC elige PAPEL")
-    } else if(PC == 3){
-        alert("PC elige Tijeras")
-    }
+    alert(" PC elige: " + eleccion(PC))
+    alert(" Jugador elige: " + eleccion(jugador))
     // LETS GET READY TO RUMBLEEEEE!!!
     if(jugador == PC) {
         alert("EMPATE!")
@@ -49,7 +46,7 @@
 </head>
 <body>
     <h1>Juguemos a Pedra, Papel o tijera</h1>
-   
+   <h2> presiona F5 para empezar</h2>
     
 </body>
 </html>
