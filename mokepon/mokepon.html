@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOKEPON1</title>
-    <script src="./js/mokepon.js"></script>
 </head>
 <body>
     <h1>MOKEPON!🔥💧🍀</h1>
@@ -29,16 +28,16 @@
 
         <label for="Pydos">Pydos</label>
         <input type="radio" name="mascota" id="Pydos" >
-        <button>Seleccionar</button>
+        <button id="button-mascota">Seleccionar</button>
 
     <section id="Seleccionar-ataque">
         <p> Tu mascota tiene  <span>3</span> vidas</p>
         <p> Las mascotas del  enenmigo tiene <span>3</span> vidas</p>
         <h2>Elige el ataque que usara tu MOKEPON!</h2>
         <p>
-            <button>Fuego!🔥🔥</button>
-            <button>Agua!💧💧</button>
-            <button>Tierra!🍀🍀</button>
+            <button id="button-fuego">Fuego!🔥🔥</button>
+            <button id="button-agua">Agua!💧💧</button>
+            <button id="button-tierra">Tierra!🍀🍀</button>
          </p>
     </section>
     <section id="mensajes">
@@ -48,7 +47,8 @@
 
     </section>
     <section id="reiniciar">
-        <button> Reiniciar el Juego</button>
+        <button id="button-reiniciar"> Reiniciar el Juego</button>
     </section>
+    <script src="./js/mokepon.js"></script>
 </body>
 </html>
