@@ -10,20 +10,21 @@ function seleccionarMascotaJugador(){
     let inputLangostelvis = document.getElementById('Langostelvis')
     let inputTucapalma = document.getElementById('Tucapalma')
     let inputPydos = document.getElementById('Pydos')
+    let spanMAscotaJugador = document.getElementById("mascota-jugador")
     if( inputHipodoge.checked){
-        alert('seleccionaste a Hipodoge 💧🐶')
+        spanMAscotaJugador.innerHTML = "Hipodoge"
     } else if(inputCapipepo.checked){
-        alert('seleccionaste a Capipepo')
+        spanMAscotaJugador.innerHTML = "Capipepo"
     }else if(inputRatigueya.checked){
-        alert('seleccionaste a Ratigueya ')
+        spanMAscotaJugador.innerHTML = "Ratigueya"
     }else if(inputLangostelvis.checked){
-        alert('seleccionaste a Langostelvis')
+        spanMAscotaJugador.innerHTML = "Langostelvis"
     }else if(inputTucapalma.checked){
-        alert('seleccionaste a Tucapalma')
+        spanMAscotaJugador.innerHTML = "Tucapalma"
     }else if(inputPydos.checked){
-        alert('seleccionaste a Pydos')
+        spanMAscotaJugador.innerHTML = "Pydos"
     }else{
-        alert('olvidaste elegir una mascota!')
+        alert("Olvidaste seleccionar una mascota!, Selecciona una para jugar!")
     }
 
 
