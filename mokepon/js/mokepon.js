@@ -25,11 +25,31 @@ function seleccionarMascotaJugador(){
         spanMAscotaJugador.innerHTML = "Pydos"
     }else{
         alert("Olvidaste seleccionar una mascota!, Selecciona una para jugar!")
-    }
+    } 
 
-
-
-
-   
+    seleccionarMascotaEnemigo()
 }
+function getRandom(min,max){
+    return Math.floor(Math.random() * (max - min + 1) +min)
+}
+function seleccionarMascotaEnemigo() {
+    let RandomAtack = getRandom(1,6)
+    let spanMascotaEnemigo = document.getElementById("mascota-enemigo")
+
+    if(RandomAtack == 1){
+        spanMascotaEnemigo.innerHTML = "Hipodoge"
+    }else if(RandomAtack == 2){
+        spanMascotaEnemigo.innerHTML = "Capipepo"
+    }else if(RandomAtack == 3){
+        spanMascotaEnemigo.innerHTML = "Ratigueya"
+    }else if(RandomAtack == 4){
+        spanMascotaEnemigo.innerHTML = "Langostelvis"
+    }else if(RandomAtack == 5){
+        spanMascotaEnemigo.innerHTML = "Tucapalma"
+    }else if(RandomAtack == 6){
+        spanMascotaEnemigo.innerHTML = "Pydos" 
+    }
+}
+
+
 window.addEventListener("load", iniciarJuego )
