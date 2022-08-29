@@ -1,4 +1,5 @@
 let ataquejugador 
+let ataqueEnemigo
 
 function iniciarJuego(){
     let buttonMascotaJugador = document.getElementById("button-mascota")
@@ -38,8 +39,10 @@ function seleccionarMascotaJugador(){
 
     seleccionarMascotaEnemigo()
 }
+
+
 function getRandom(min,max){
-    return Math.floor(Math.random() * (max - min + 1) +min)
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 function seleccionarMascotaEnemigo() {
     let RandomAtack = getRandom(1,6)
@@ -61,15 +64,29 @@ function seleccionarMascotaEnemigo() {
 }
 function ataqueFuego(){
     ataquejugador = "FUEGO"
-    alert(ataquejugador)
+    randomEnemyAtack()
+    alert("elegiste " + ataquejugador + " el enemigo atacara con " + ataqueEnemigo)
 }
 function ataqueAgua(){
     ataquejugador = "AGUA"
-    alert(ataquejugador)
+    randomEnemyAtack()
+    alert("elegiste " + ataquejugador + " el enemigo atacara con " + ataqueEnemigo)
 }
 function ataqueTierra(){
     ataquejugador = "TIERRA"
-    alert(ataquejugador)
+    randomEnemyAtack()
+    alert("elegiste " + ataquejugador + " el enemigo atacara con " + ataqueEnemigo)
+}
+function randomEnemyAtack(){
+    let aleatorio = getRandom(1,3)
+    if ( aleatorio == 1){
+        ataqueEnemigo = 'FUEGO'
+    } else if( aleatorio == 2){
+        ataqueEnemigo = 'AGUA'
+    } else if (aleatorio == 3){
+        ataqueEnemigo = 'TIERRA'
+    }
+
 }
 
 
