@@ -14,6 +14,8 @@ function iniciarJuego(){
     buttonAgua.addEventListener('click', ataqueAgua)
     let buttonTierra = document.getElementById("button-tierra")
     buttonTierra.addEventListener('click', ataqueTierra)
+    let buttonReiniciar = document.getElementById("button-reiniciar")
+    buttonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
 function seleccionarMascotaJugador(){
@@ -49,9 +51,7 @@ function crearMensaje(){
     sectionMensajes.appendChild(parrafo)
 }
 
-function getRandom(min,max){
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
+
 function seleccionarMascotaEnemigo() {
     let RandomAtack = getRandom(1,6)
     let spanMascotaEnemigo = document.getElementById("mascota-enemigo")
@@ -128,9 +128,18 @@ function crearFinal(resultadofinal){
     let parrafo = document.createElement('p')
     parrafo.innerHTML = resultadofinal
     sectionMensajes.appendChild(parrafo)
+
+    let buttonFuego =document.getElementById("button-fuego")
+    buttonFuego.disabled = true
+    let buttonAgua = document.getElementById("button-agua")
+    buttonAgua.disabled = true
+    let buttonTierra = document.getElementById("button-tierra")
+    buttonTierra.disabled = true
 }
-
-
-
-
+function reiniciarJuego(){
+    location.reload()
+}
+function getRandom(min,max){
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 window.addEventListener("load", iniciarJuego )
