@@ -39,7 +39,12 @@ function seleccionarMascotaJugador(){
 
     seleccionarMascotaEnemigo()
 }
-
+function crearMensaje(){
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = ' tu mascota ataco con ' + ataquejugador+', la mascota del enemigo ataco con' +  ataqueEnemigo + ' pendiente'
+    sectionMensajes.appendChild(parrafo)
+}
 
 function getRandom(min,max){
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -65,17 +70,14 @@ function seleccionarMascotaEnemigo() {
 function ataqueFuego(){
     ataquejugador = "FUEGO"
     randomEnemyAtack()
-    alert("elegiste " + ataquejugador + " el enemigo atacara con " + ataqueEnemigo)
 }
 function ataqueAgua(){
     ataquejugador = "AGUA"
     randomEnemyAtack()
-    alert("elegiste " + ataquejugador + " el enemigo atacara con " + ataqueEnemigo)
 }
 function ataqueTierra(){
     ataquejugador = "TIERRA"
     randomEnemyAtack()
-    alert("elegiste " + ataquejugador + " el enemigo atacara con " + ataqueEnemigo)
 }
 function randomEnemyAtack(){
     let aleatorio = getRandom(1,3)
@@ -86,7 +88,7 @@ function randomEnemyAtack(){
     } else if (aleatorio == 3){
         ataqueEnemigo = 'TIERRA'
     }
-
+    crearMensaje()
 }
 
 
