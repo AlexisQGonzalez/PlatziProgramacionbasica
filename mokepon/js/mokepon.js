@@ -5,9 +5,10 @@ let vidasJugador = 3
 let vidasEnemigo = 3
 
 function iniciarJuego(){
+    let sectionAtaques = document.getElementById("Seleccionar-ataque")
+    sectionAtaques.style.display = 'none'
     let buttonMascotaJugador = document.getElementById("button-mascota")
     buttonMascotaJugador.addEventListener("click", seleccionarMascotaJugador)
-    
     let buttonFuego =document.getElementById("button-fuego")
     buttonFuego.addEventListener('click', ataqueFuego)
     let buttonAgua = document.getElementById("button-agua")
@@ -16,9 +17,17 @@ function iniciarJuego(){
     buttonTierra.addEventListener('click', ataqueTierra)
     let buttonReiniciar = document.getElementById("button-reiniciar")
     buttonReiniciar.addEventListener('click', reiniciarJuego)
+    buttonReiniciar.style.display = 'none'
+
 }
 
-function seleccionarMascotaJugador(){
+function seleccionarMascotaJugador(){ 
+    let sectionMascota = document.getElementById("Seleccionar-mascota")
+    sectionMascota.style.display = 'none'
+    let sectionAtaques = document.getElementById("Seleccionar-ataque")
+    sectionAtaques.style.display = 'block'
+   
+    
     let inputHipodoge = document.getElementById('Hipodoge')
     let inputCapipepo = document.getElementById('Capipepo')
     let inputRatigueya = document.getElementById('Ratigueya')
@@ -26,6 +35,7 @@ function seleccionarMascotaJugador(){
     let inputTucapalma = document.getElementById('Tucapalma')
     let inputPydos = document.getElementById('Pydos')
     let spanMAscotaJugador = document.getElementById("mascota-jugador")
+   
     if( inputHipodoge.checked){
         spanMAscotaJugador.innerHTML = "Hipodoge"
     } else if(inputCapipepo.checked){
@@ -124,6 +134,8 @@ function revisarVidas(){
     }
 }
 function crearFinal(resultadofinal){
+    let buttonReiniciar = document.getElementById("button-reiniciar")
+    buttonReiniciar.style.display = 'block'
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')
     parrafo.innerHTML = resultadofinal
