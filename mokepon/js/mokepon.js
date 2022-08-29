@@ -1,6 +1,8 @@
 let ataquejugador 
 let ataqueEnemigo
 let resultado
+let vidasJugador = 3
+let vidasEnemigo = 3
 
 function iniciarJuego(){
     let buttonMascotaJugador = document.getElementById("button-mascota")
@@ -94,6 +96,9 @@ function randomEnemyAttack(){
 
 // lets get ready to rumbleeee!!
 function combate(){
+    let spanVidasJugador = document.getElementById("vidas-jugador")
+    let spanVidasEnemigo = document.getElementById("vidas-enemigo")
+
     if ( ataquejugador === ataqueEnemigo){
         resultado = 'EMPATE'
         crearMensaje()
@@ -101,11 +106,31 @@ function combate(){
     else if ( ataquejugador === "FUEGO" && ataqueEnemigo === "TIERRA" || ataquejugador === "AGUA" && ataqueEnemigo === "FUEGO" ||ataquejugador === "TIERRA" && ataqueEnemigo === "AGUA"  ){
         resultado = ' GANASTE'
         crearMensaje()
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     }else {
         resultado = ' Perdiste'
         crearMensaje()
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador
+    }
+    revisarVidas()
+}
+function revisarVidas(){
+    if (vidasEnemigo == 0){
+       crearFinal("Haz derrotado a la Mascota enemiga. GANASTE! FELICITACIONES!")
+    } else if(vidasJugador == 0){
+        crearFinal("Derrotaron a tu Mascota. PERDISTE!")
     }
 }
+function crearFinal(resultadofinal){
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = resultadofinal
+    sectionMensajes.appendChild(parrafo)
+}
+
+
 
 
 window.addEventListener("load", iniciarJuego )
