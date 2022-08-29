@@ -1,6 +1,15 @@
+let ataquejugador 
+
 function iniciarJuego(){
     let buttonMascotaJugador = document.getElementById("button-mascota")
-    buttonMascotaJugador.addEventListener("click", seleccionarMascotaJugador)   
+    buttonMascotaJugador.addEventListener("click", seleccionarMascotaJugador)
+    
+    let buttonFuego =document.getElementById("button-fuego")
+    buttonFuego.addEventListener('click', ataqueFuego)
+    let buttonAgua = document.getElementById("button-agua")
+    buttonAgua.addEventListener('click', ataqueAgua)
+    let buttonTierra = document.getElementById("button-tierra")
+    buttonTierra.addEventListener('click', ataqueTierra)
 }
 
 function seleccionarMascotaJugador(){
@@ -49,6 +58,18 @@ function seleccionarMascotaEnemigo() {
     }else if(RandomAtack == 6){
         spanMascotaEnemigo.innerHTML = "Pydos" 
     }
+}
+function ataqueFuego(){
+    ataquejugador = "FUEGO"
+    alert(ataquejugador)
+}
+function ataqueAgua(){
+    ataquejugador = "AGUA"
+    alert(ataquejugador)
+}
+function ataqueTierra(){
+    ataquejugador = "TIERRA"
+    alert(ataquejugador)
 }
 
 
