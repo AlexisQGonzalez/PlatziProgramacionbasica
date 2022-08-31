@@ -1,13 +1,48 @@
-.title {
-    color: hotpink ;
-    width: 320px;
-    height: 50px;
-    background-color: teal;
+html{
+    font-family: 'Quicksand', sans-serif;
 }
+body{
+    background-color: #2A0944;
+}
+.title {
+    color: white ;
+    font-size: 32px;
+} 
+.subtitulo{
+    color: white;
+    font-size: 20px;
+}
+
 #Seleccionar-mascota{
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.tarjetas{
+    display: flex;
+    gap: 10px;
+}
+.tarjeta-de-mokepon{
+    width: 100px;
+    height: 100px;
+    background-color: #3FA796;
+    padding: 10px;
+    margin: 10px;
+    border: 1 solid;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.tarjeta-de-mokepon img{
+    width: 80px;
+}
+#button-mascota{
+    display: block;
+    width: 100px;
+    height: 80px;
+    background-color: teal;
+    border-style: none;
+    border-radius: 15px;
+    color: white;
 }
