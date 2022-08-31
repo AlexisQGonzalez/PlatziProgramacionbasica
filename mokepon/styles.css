@@ -1,0 +1,13 @@
+.title {
+    color: hotpink ;
+    width: 320px;
+    height: 50px;
+    background-color: teal;
+}
+#Seleccionar-mascota{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
